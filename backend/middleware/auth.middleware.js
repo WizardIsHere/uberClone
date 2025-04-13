@@ -12,7 +12,6 @@ module.exports.authenticateUser = async (req, res, next) => {
             ? req.headers.authorization.split(' ')[1]
             : null);
 
-
     if (!token) {
         return res.status(401).json({ message: 'Unauthorized, Token not provided!' });
     }
